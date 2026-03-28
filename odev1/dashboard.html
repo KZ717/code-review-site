@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel | Kod İnceleme</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <img src="favicon.svg" alt="logo">
+      <span>Kod İnceleme</span>
+    </a>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="features.html">Özellikler</a></li>
+        <li><a href="reviews.html">İncelemeler</a></li>
+        <li><a href="dashboard.html" class="active">Panel</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="btn btn-small">İnceleme Başlat</a>
+  </div>
+</header>
+
+<main class="page-top">
+  <section class="section">
+    <div class="container">
+
+      <p class="section-tag">Analiz Paneli</p>
+      <h1 class="section-title">Kod Kalitesi Paneli</h1>
+
+      <div class="dashboard-stats">
+        <div class="metric-card">
+          <p>Toplam İnceleme</p>
+          <h2>128</h2>
+        </div>
+        <div class="metric-card">
+          <p>Kritik Sorunlar</p>
+          <h2>8</h2>
+        </div>
+        <div class="metric-card">
+          <p>Uyarılar</p>
+          <h2>16</h2>
+        </div>
+        <div class="metric-card">
+          <p>Kalite Skoru</p>
+          <h2>91%</h2>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+
+        <div class="panel">
+          <h3>Son İncelemeler</h3>
+          <ul class="list">
+            <li>auth.js — 1 kritik, 2 uyarı</li>
+            <li>app.py — performans geliştirildi</li>
+            <li>service.php — güvenlik kontrolü eklendi</li>
+            <li>main.cpp — bellek kullanımı optimize edildi</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Dağılım</h3>
+          <div class="fake-chart">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+            <div class="bar bar-4"></div>
+          </div>
+          <div class="chart-labels">
+            <span>Kritik</span>
+            <span>Uyarı</span>
+            <span>Bilgi</span>
+            <span>Başarılı</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Bakım Skoru</h3>
+          <div class="score-circle">91%</div>
+          <p class="muted">Kod genel olarak iyi durumda ancak bazı iyileştirmeler yapılabilir.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Kontrol Listesi</h3>
+          <ul class="check-list">
+            <li>✔ Kod standartları uygun</li>
+            <li>✔ Tekrarlayan kod azaltıldı</li>
+            <li>✔ Hata yönetimi var</li>
+            <li>✖ Güvenlik eksikleri mevcut</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <p>© 2026 Kod İnceleme Platformu</p>
+    <p>Kod kalitesini tek yerden yönetin.</p>
+  </div>
+</footer>
+
+</body>
+</html>

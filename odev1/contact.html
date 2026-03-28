@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | Kod İnceleme</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <img src="favicon.svg" alt="logo">
+      <span>Kod İnceleme</span>
+    </a>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="features.html">Özellikler</a></li>
+        <li><a href="reviews.html">İncelemeler</a></li>
+        <li><a href="dashboard.html">Panel</a></li>
+        <li><a href="contact.html" class="active">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="btn btn-small">İnceleme Başlat</a>
+  </div>
+</header>
+
+<main class="page-top">
+  <section class="section">
+    <div class="container contact-grid">
+
+      <div>
+        <p class="section-tag">İletişim</p>
+        <h1 class="section-title">Kod İnceleme Talebi Gönder</h1>
+        <p class="muted">
+          Projenizi paylaşın ve daha temiz, güvenli ve sürdürülebilir kod için
+          profesyonel geri bildirim alın.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Adınız">
+        <input type="email" placeholder="E-posta">
+        <input type="text" placeholder="Proje Adı">
+
+        <select>
+          <option>Proje Türü</option>
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>Full Stack</option>
+          <option>API</option>
+        </select>
+
+        <textarea rows="6" placeholder="Kod inceleme talebinizi yazın"></textarea>
+
+        <button class="btn">Gönder</button>
+      </form>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <p>© 2026 Kod İnceleme Platformu</p>
+    <p>Sen kodu yaz, biz geliştirelim.</p>
+  </div>
+</footer>
+
+</body>
+</html>
