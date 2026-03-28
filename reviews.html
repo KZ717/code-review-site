@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İncelemeler | Kod İnceleme Platformu</title>
+  <meta
+    name="description"
+    content="JavaScript, Python, Java, C++ ve PHP için örnek kod incelemeleri."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <img src="favicon.svg" alt="logo">
+      <span>Kod İnceleme</span>
+      </a>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="features.html">Özellikler</a></li>
+          <li><a href="reviews.html" class="active">İncelemeler</a></li>
+          <li><a href="dashboard.html">Panel</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn-small">İnceleme Başlat</a>
+    </div>
+  </header>
+
+  <main class="page-top">
+    <section class="section">
+      <div class="container">
+        <p class="section-tag">Kod Örnekleri</p>
+        <h1 class="section-title">Farklı Programlama Dilleri İçin Kod İncelemeleri</h1>
+        <p class="muted" style="max-width: 780px; margin-bottom: 28px;">
+          Bu sayfada JavaScript, Python, Java, C++ ve PHP için örnek inceleme senaryoları yer alır.
+          Amaç; hata tespiti, okunabilirlik, güvenlik ve sürdürülebilirlik açısından
+          kod kalitesini nasıl geliştirebileceğimizi göstermektir.
+        </p>
+
+        <div class="languages-grid" style="margin-bottom: 32px;">
+          <div class="lang-badge">JavaScript</div>
+          <div class="lang-badge">Python</div>
+          <div class="lang-badge">Java</div>
+          <div class="lang-badge">C++</div>
+          <div class="lang-badge">PHP</div>
+        </div>
+
+        <div class="review-layout">
+
+          <article class="review-card-big">
+            <div class="review-head">
+              <h2>Örnek 01 — Gereksiz Koşul Yapısı (JavaScript)</h2>
+              <span class="badge warning">Uyarı</span>
+            </div>
+
+            <div class="review-grid">
+              <div class="code-box">
+<pre><code>function aktifMi(user) {
+  if (user.isActive == true) {
+    return true;
+  } else {
+    return false;
+  }
+}</code></pre>
+              </div>
+
+              <div class="review-note">
+                <h3>İnceleme Notu</h3>
+                <p>
+                  Koşul yapısı gereksiz yere uzatılmış. Boolean değer doğrudan
+                  döndürülebilir. Ayrıca `==` yerine daha güvenli karşılaştırmalar tercih edilmelidir.
+                </p>
+
+                <div class="code-box small">
+<pre><code>function aktifMi(user) {
+  return user.isActive;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card-big">
+            <div class="review-head">
+              <h2>Örnek 02 — Daha Temiz Toplama İşlemi (Python)</h2>
+              <span class="badge blue">Bilgi</span>
+            </div>
+
+            <div class="review-grid">
+              <div class="code-box">
+<pre><code>total = 0
+for item in products:
+    total += item["price"]
+
+print(total)</code></pre>
+              </div>
+
+              <div class="review-note">
+                <h3>İnceleme Notu</h3>
+                <p>
+                  Kod çalışıyor ancak Python’un güçlü built-in özellikleri kullanılmamış.
+                  Daha okunabilir ve kısa bir çözüm için `sum()` tercih edilebilir.
+                </p>
+
+                <div class="code-box small">
+<pre><code>total = sum(item["price"] for item in products)
+print(total)</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card-big">
+            <div class="review-head">
+              <h2>Örnek 03 — Null Kontrolü Eksikliği (Java)</h2>
+              <span class="badge danger">Kritik</span>
+            </div>
+
+            <div class="review-grid">
+              <div class="code-box">
+<pre><code>public String getName(User user) {
+    return user.getName();
+}</code></pre>
+              </div>
+
+              <div class="review-note">
+                <h3>İnceleme Notu</h3>
+                <p>
+                  `user` nesnesi null gelirse uygulama hata verebilir.
+                  Kullanımdan önce null kontrolü yapılmalıdır.
+                </p>
+
+                <div class="code-box small">
+<pre><code>public String getName(User user) {
+    if (user == null) {
+        return "Bilinmiyor";
+    }
+    return user.getName();
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card-big">
+            <div class="review-head">
+              <h2>Örnek 04 — Bellek Yönetimi Riski (C++)</h2>
+              <span class="badge danger">Kritik</span>
+            </div>
+
+            <div class="review-grid">
+              <div class="code-box">
+<pre><code>int* number = new int(10);
+std::cout << *number << std::endl;</code></pre>
+              </div>
+
+              <div class="review-note">
+                <h3>İnceleme Notu</h3>
+                <p>
+                  Ham pointer kullanımı bellek sızıntısına yol açabilir.
+                  Modern C++ yaklaşımında akıllı pointer kullanılması daha güvenlidir.
+                </p>
+
+                <div class="code-box small">
+<pre><code>#include &lt;memory&gt;
+
+auto number = std::make_unique&lt;int&gt;(10);
+std::cout << *number << std::endl;</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card-big">
+            <div class="review-head">
+              <h2>Örnek 05 — Zayıf Karşılaştırma (PHP)</h2>
+              <span class="badge warning">Uyarı</span>
+            </div>
+
+            <div class="review-grid">
+              <div class="code-box">
+<pre><code>if ($value == 0) {
+    echo "Sıfır";
+}</code></pre>
+              </div>
+
+              <div class="review-note">
+                <h3>İnceleme Notu</h3>
+                <p>
+                  Zayıf karşılaştırma beklenmeyen sonuçlara neden olabilir.
+                  Daha güvenilir sonuçlar için strict comparison kullanılmalıdır.
+                </p>
+
+                <div class="code-box small">
+<pre><code>if ($value === 0) {
+    echo "Sıfır";
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>© 2026 Kod İnceleme Platformu</p>
+      <p>Farklı diller için temiz, güvenli ve sürdürülebilir kod analizi.</p>
+    </div>
+  </footer>
+</body>
+</html>
